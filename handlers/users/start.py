@@ -16,8 +16,8 @@ async def show_channels(message: types.Message):
         # logging.info(invite_link)
         channels_format += f"👉 <a href='{invite_link}'>{chat.title}</a>\n"
 
-    await message.answer(f"Quyidagi kanallarga obuna bo'ling:👇🏻 \n"
-                         f"{channels_format}",
+    await message.answer(f"Quyidagi kanallarga obuna bo'ling:👇🏻 \n\n"
+                         f"<b>{channels_format}</b>",
                          reply_markup=check_button,
                          disable_web_page_preview=True)
 

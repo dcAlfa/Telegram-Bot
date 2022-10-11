@@ -8,6 +8,6 @@ from utils import remove_background
 async def photo_handler(msg: types.Message):
     photo = msg.photo[-1]
     link = await photo_link(photo)
-    await msg.answer(f"Iltimos kuting!!!")
+    await msg.answer(f"Iltimos kuting! ⏳")
     new_photo = await remove_background(link)
     await msg.reply_document(document=new_photo, caption="Bu fayl")
